@@ -11,13 +11,19 @@
   </head>
 
   <body>
-    <ul>
-      <li><%= link_to "Hello", example_hello_path %></li>
-      <li><%= link_to "Clipboard", example_clipboard_path %></li>
-      <li><%= link_to "ContentLoader", example_content_loader_path %></li>
-      <li><%= link_to "Slideshow", example_slideshow_path %></li>
-    </ul>
-    <div>
+    <main>
+    <div class="sidebar">
+      <img src="/logo.svg" class="logo" alt="Stimulus logo" width="75" height="75">
+
+      <ul class="nav">
+        <li><%= link_to "Hello", example_hello_path %></li>
+        <li><%= link_to "Clipboard", example_clipboard_path %></li>
+        <li><%= link_to "ContentLoader", example_content_loader_path %></li>
+        <li><%= link_to "Slideshow", example_slideshow_path %></li>
+      </ul>
+    </div>
+
+    <div class="container">
       <%= yield %>
     </div>
   </body>

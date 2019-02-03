@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'example/clipboard'
   get 'example/content_loader'
   get 'example/slideshow'
+  get 'uptime', to: 'uptime#index'
 end
