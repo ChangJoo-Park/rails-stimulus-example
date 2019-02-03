@@ -10,9 +10,19 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "output" ]
+  static targets = [ "name" ]
 
-  connect() {
-    this.outputTarget.textContent = 'Hello, Stimulus!'
+  greet (event) {
+    event.preventDefault()
+
+    if (!this.name) {
+      return
+    }
+
+    alert(`Hello, ${this.name}!`)
+  }
+
+  get name () {
+    return this.nameTarget.value.trim()
   }
 }
