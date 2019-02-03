@@ -11,6 +11,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <ul>
+      <li><%= link_to "Hello", example_hello_path %></li>
+      <li><%= link_to "Clipboard", example_clipboard_path %></li>
+      <li><%= link_to "ContentLoader", example_content_loader_path %></li>
+      <li><%= link_to "Slideshow", example_slideshow_path %></li>
+    </ul>
+    <div>
+      <%= yield %>
+    </div>
   </body>
 </html>
